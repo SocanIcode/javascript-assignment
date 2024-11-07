@@ -71,32 +71,32 @@ header {
   width: 120px;
   margin-right: 40px;
 }
-#navbar {
+.navbar {
   font-size: 1.2em;
   margin-top: 40px;
 }
-#navbar ul,
+.navbar ul,
 li {
   display: flex;
   list-style: none;
   padding: 0 25px;
 }
 
-#navbar a {
+.navbar a {
   text-decoration: none;
   color: #ffff;
   transition: 0.3s ease-in-out;
 }
 
-#navbar a:hover,
-#navbar a.active {
+.navbar a:hover,
+.navbar a.active {
   color: #d36c18;
   font-size: 19px;
 }
 .ham-menu {
   display: none;
 }
-#exit {
+.navbar #exit {
   display: none;
 }
 /*header ends */
@@ -385,7 +385,7 @@ footer .copyright {
 
 /* syart media qurt*/
 @media (max-width: 799px) {
-  #navbar {
+  .navbar {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -395,18 +395,18 @@ footer .copyright {
     top: 7%;
     right: -300px;
   }
+  .navbar.active {
+    right: 0;
+  }
 
-  #navbar ul,
+  .navbar ul,
   li {
     display: flex;
     flex-direction: column;
     margin: 25px 0 25px;
   }
-  #navbar.active {
-    right: 0;
-  }
 
-  #navbar .user {
+  .navbar .user {
     display: none;
   }
   .ham-menu,
@@ -420,12 +420,11 @@ footer .copyright {
   .ham-menu #bar {
     cursor: pointer;
   }
-}
-#exit {
-  display: block;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 1.2em;
-  cursor: pointer;
+
+  .navbar #exit {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
 }
