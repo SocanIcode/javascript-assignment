@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-color: #e3e6e6;
+  width: 100%;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+h2 {
+  font-size: 2.2em;
+  font-weight: bolder;
+}
+h3 {
+  font-size: 1.9em;
+}
+h4 {
+  font-size: 1.7em;
+}
+h5 {
+  font-size: 1.5em;
+}
+.section-gap {
+  padding: 40px 80px;
+}
+.line-gap {
+  padding: 40px 0;
+}
+.button-cta {
+  color: #c24a4a;
+  font-size: 1.7em;
+  font-weight: bolder;
+  box-shadow: 10px 5px 25px #b5e4f0;
+  padding: 15px 45px;
+  margin: 10px;
+  border: 0.5px solid #4a8999;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+.button-cta:hover {
+  color: #fff;
+  background-color: #4a8999;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+/*header start here*/
+header {
+  background-color: #0f1111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px #c5c8c9;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#logo img {
+  width: 120px;
+  margin-right: 40px;
+}
+#navbar {
+  font-size: 1.2em;
+  margin-top: 40px;
+}
+#navbar ul,
+li {
+  display: flex;
+  list-style: none;
+  padding: 0 25px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #ffff;
+  transition: 0.3s ease-in-out;
+}
+
+#navbar a:hover,
+#navbar a.active {
+  color: #d36c18;
+  font-size: 19px;
+}
+.ham-menu {
+  display: none;
+}
+#exit {
+  display: none;
+}
+/*header ends */
+/* this is for footer section*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 0.5px solid #e0e0e0;
+  background-color: #081727;
+  color: #c5c8c9;
+}
+footer .nav-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+  line-height: 20px;
+  font-weight: lighter;
+}
+footer .nav-footer h4 {
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+footer .nav-footer address,
+p {
+  font-size: 15px;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+footer .nav-footer a {
+  color: #c5c8c9;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+footer .nav-footer .email-link {
+  color: #1076e4;
+}
+
+footer .nav-footer img {
+  max-width: 80px;
+}
+footer .nav-footer i {
+  color: #bbb6ad;
+  font-size: 1.4em;
+}
+
+footer .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #d36c18;
+  width: 100%;
+}
+/* footer section ends here*/
+/*slide start here*/
+.slides {
+  background-image: url("/image/man-mountian-cover.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  border: 30px solid #fffefe;
+  padding-left: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #4a8999;
+  font-size: 2rem;
+}
+
+.slides h1 {
+  color: #d36c18;
+}
+.slides .button-cta {
+  padding: 20px 80px;
+  margin: 20px 50px;
+  font-size: 2.5rem;
+}
+
+/*slide ends here*/
+/* this is for product feature section */
+#main-prod {
+  text-align: center;
+}
+#main-prod h2 {
+  font-size: 2.7rem;
+  color: #d36c18;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+#main-prod p {
+  color: #c24a4a;
+  font-size: 1.4em;
+}
+
+#main-prod .new-prod h2 {
+  color: #4a8999;
+}
+#main-prod .new-prod p {
+  color: #2c2c2c;
+}
+
+#main-prod .item-box {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+#main-prod .item {
+  width: 23%;
+  padding: 15px 10px;
+  margin: 10px 10px;
+  border: 1px solid #e8e8e9;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  box-shadow: 20px 20px 40px #dddddd;
+  transition: 0.1 ease;
+  position: relative;
+}
+#main-prod .item:hover {
+  box-shadow: 20px 20px 40px #c0bfbf;
+}
+
+#main-prod .item img {
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid #f2f2f3;
+  object-fit: contain;
+}
+
+#main-prod .item .descr {
+  text-align: start;
+  padding: 10px 0;
+}
+#main-prod .item .descr span {
+  color: #797979;
+  font-size: 12px;
+}
+#main-prod .item .descr h5 {
+  padding-top: 12px;
+  color: #2c2c2c;
+  font-size: 1em;
+  padding: 0 8px;
+  margin: 10px 0;
+}
+
+#main-prod .item .descr .star {
+  color: #dd8d4b;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+#main-prod .item .descr h4 {
+  padding-top: 7px;
+  font-size: 1.2em;
+  color: #fc3511;
+  margin: 0 10px;
+  font-weight: bolder;
+}
+
+#main-prod .item .nprice h4 {
+  color: #4a8999;
+}
+
+#main-prod .item .descr a {
+  color: #dd8d4b;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: #f3e2d4;
+  padding: 0 10px;
+  border: 1px solid #e2b892;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+
+/* this is for the banner section*/
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-image: url(/image/banner.png);
+  border: 1px solid rgb(202, 216, 238);
+  border-radius: 25px;
+  box-shadow: 10px 5px 15px #b5e4f0;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 25vh;
+  margin-top: 50px;
+}
+.banner h2 {
+  font-size: 2em;
+  color: #c24a4a;
+  padding-bottom: 10px;
+}
+.banner span {
+  font-size: 40px;
+  font-weight: bolder;
+}
+.banner h4 {
+  color: #d36c18;
+  font-size: 18px;
+}
+/* this for offers and deal banner*/
+.offer-cta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-top: 40px;
+  background-image: url(/image/banner-2.png);
+  background-color: #c2110a;
+  box-shadow: 10px 15px 25px #cc2020;
+}
+
+.offer-cta .gender-wm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(/image/gender-wm-yellow-jacket-yellowbackground.png);
+  padding: 30px;
+  border: 1px solid rgb(202, 216, 238);
+  border-radius: 10px;
+  background-size: cover;
+  background-position: left;
+  min-width: 580px;
+  height: 40vh;
+}
+.offer-cta .m-sales {
+  background-image: url(/image/man-winterjacket-bluegridenbackground.png);
+}
+.offer-cta .collection {
+  background-image: url(/image/bannner-female.jpg);
+}
+
+.offer-cta h4 {
+  color: #4a8999;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.offer-cta h2 {
+  color: #c2110a;
+  font-size: 1.7em;
+  width: 350px;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.offer-cta span {
+  font-style: italic;
+  color: #358296;
+  font-stretch: semi-condensed;
+  font-weight: 900;
+  font-size: 1.3em;
+  padding-top: 40px;
+}
+
+.gender-wm .button-cta {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px 28px;
+  box-shadow: none;
+  background-color: transparent;
+}
+.gender-wm:hover .button-cta {
+  color: #fff;
+  background-color: #4a8999;
+  border: none;
+}
+/* banner ends here*/
+
+/* syart media qurt*/
+@media (max-width: 799px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #081727;
+    height: 100vh;
+    width: 300px;
+    top: 7%;
+    right: -300px;
+  }
+
+  #navbar ul,
+  li {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0 25px;
+  }
+  #navbar.active {
+    right: 0;
+  }
+
+  #navbar .user {
+    display: none;
+  }
+  .ham-menu,
+  a {
+    display: flex;
+    align-items: flex-start;
+    color: #fff;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+  .ham-menu #bar {
+    cursor: pointer;
+  }
+}
+#exit {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
