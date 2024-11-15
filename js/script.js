@@ -41,43 +41,67 @@ function sortProducts(category) {
 }
 
 // Function to load product images and data dynamically on the product page// Assuming the product page URL is 'productview.html' and uses URL search params for product ID
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("data.js")
-    .then((response) => response.js())
-    .then((products) => {
-      const items = document.querySelectorAll(".item-box .item");
+// Add product to cart functionality
+document.querySelector(".button-cta").addEventListener("click", function (e) {
+  e.preventDefault();
 
-      items.forEach((item, index) => {
-        item.addEventListener("onclick", function () {
-          const productId = index + 1; // Use index to get the product ID
-          localStorage.setItem("productId", productId); // Store product ID in localStorage
-        });
-      });
-    });
+  // Get selected product details
+  const productName = document.querySelector(".pro-details h4").innerText;
+  const productPrice = document.querySelector(".pro-details h2").innerText;
+  const productSize = document.querySelector(".pro-details select").value;
+  const quantity = document.querySelector(".quantity-input").value;
+
+  // Check if a size is selected
+  if (productSize === "Select Size") {
+    alert("Please select a size for the product!");
+    return;
+  }
+
+  // Create product object
+  const product = {
+    name: productName,
+    price: productPrice,
+    size: productSize,
+    quantity: quantity,
+  };
+
+  // Save product to localStorage (or an array)
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Product added to cart!");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Fetch the JSON data
-  fetch("data.js")
-    .then((response) => response.js())
-    .then((products) => {
-      const productId = localStorage.getItem("productId");
-      const product = products.find((p) => p.id == productId); // Find the product by ID
+fetch("/path/to/products.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const productContainer = document.getElementById("proview");
 
-      if (product) {
-        const mainImage = document.getElementById("mainimg");
-        const title = document.querySelector(".pro-details h4");
-        const price = document.querySelector(".pro-details h2");
-        const description = document.querySelector(".pro-details p");
-
-        // Set the image and text content dynamically
-        mainImage.src = product.image;
-        mainImage.alt = product.altText;
-        title.textContent = product.title;
-        price.textContent = product.price;
-        description.textContent = product.description;
-      } else {
-        console.error("Product not found");
-      }
+    // Loop through each product and display it
+    data.forEach((product) => {
+      const productElement = document.createElement("section");
+      productElement.classList.add("product-container");
+      productElement.classList.add("section-gap");
+      productElement.innerHTML = `
+        <div class="pro-image">
+          <img src="${product.image}" alt="${product.name}" />
+        </div>
+        <div class="pro-details">
+          <h6>${product.category}</h6>
+          <h4>${product.name}</h4>
+          <h2>${product.price}</h2>
+          <select>
+            <option>Select Size</option>
+            ${product.sizes.map((size) => `<option>${size}</option>`).join("")}
+          </select>
+          <input type="number" value="1" min="1" class="quantity-input" />
+          <a class="button-cta" href="#">Add to Cart</a>
+          <h4>Product Description</h4>
+          <p>${product.description}</p>
+        </div>
+      `;
+      productContainer.appendChild(productElement);
     });
-});
+  })
+  .catch((error) => console.error("Error fetching products:", error));

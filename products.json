@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Wind-protection all season red jacket",
+    "category": "Women",
+    "price": "545 kr",
+    "image": "/image/women-pink-wind-jacket.jpg",
+    "description": "A pink jacket suitable for all seasons, featuring warm insulated material. The jacket has black accents on the zipper and cuffs, adding a stylish contrast to the light pink color.",
+    "sizes": ["Small (S)", "Medium (M)", "Large (L)", "Extra Large (XL)"]
+  },
+  {
+    "id": 2,
+    "name": "Men's Black Windbreaker",
+    "category": "Men",
+    "price": "650 kr",
+    "image": "/image/men-black-windbreaker.jpg",
+    "description": "A lightweight and stylish windbreaker jacket designed for comfort and versatility in all seasons.",
+    "sizes": ["Small (S)", "Medium (M)", "Large (L)", "Extra Large (XL)"]
+  }
+]
