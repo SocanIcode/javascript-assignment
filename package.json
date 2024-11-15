@@ -1,0 +1,28 @@
+{
+  "name": "javascriptassignment",
+  "version": "1.0.0",
+  "description": "Javascript-assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SocanIcode/javascript-assignment.git"
+  },
+  "keywords": [
+    "javascript",
+    "api"
+  ],
+  "author": "azeb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SocanIcode/javascript-assignment/issues"
+  },
+  "homepage": "https://github.com/SocanIcode/javascript-assignment#readme",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "jsonserver": "^0.1.6"
+  }
+}
