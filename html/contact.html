@@ -24,10 +24,10 @@
       /></a>
       <div class="navbar">
         <ul>
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="/index.html">Home</a></li>
           <li><a href="/html/product.html">Poduct</a></li>
-          <li><a class="active" href="/html/about.html">About</a></li>
-          <li><a href="/html/contact.html">Contact</a></li>
+          <li><a  href="/html/about.html">About</a></li>
+          <li><a class="active" href="/html/contact.html">Contact</a></li>
           <li>
             <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
           </li>
@@ -39,6 +39,58 @@
         </ul>
       </div>
     </header>
+    <main class="contact">
+      <h1>Contact Us</h1>
+
+      <div class="contact-page_wrapper">
+        <section class="contact-page_detail">
+          <h2>Let's Contact</h2>
+          <p>
+            <i class="fas fa-subject-square-alt contact-icon"></i> 001-234-567
+          </p>
+          <p><i class="fas fa-envelope contact-icon"></i>info@rainydays.com</p>
+        </section>
+        <section class="contact-page_form">
+          <form action=" " id="contactForm">
+            <legend>
+              <h2>Send us a Message</h2>
+            </legend>
+            <div class="success"></div>
+            <label for="name">First Name</label>
+            <input type="text" name="firstName" id="firstName" class="form" />
+            <div class="contact-form-error" id="firstName-error">
+              your must enter your first name
+            </div>
+
+            <label for="name">Last Name</label>
+            <input type="text" name="lastName" id="lastName" class="form" />
+            <div class="contact-form-error" id="lastName-error">
+              your must enter your last name
+            </div>
+
+            <label for="email">Email Address</label>
+            <input type="text" name="email" id="email" class="form" />
+            <div class="contact-form-error" id="email-error">
+              your email address is invalid. (example@eg.com)
+            </div>
+
+            <label for="subject">Subject </label>
+            <input type="text" name="subject" id="subject" class="form" />
+            <div class="contact-form-error" id="subject-error">
+              your subject must have filled
+            </div>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <div class="contact-form-error" id="message-error">
+              your message must have filled
+            </div>
+
+            <button class="cart cartSubmit">submit</button>
+          </form>
+        </section>
+      </div>
+    </main>
     <footer class="section-gap">
       <div class="nav-footer">
         <a href="/index.html"
@@ -97,5 +149,6 @@
         <p>@Raindays 2024 - All Right Reserved</p>
       </div>
     </footer>
+    <script src="/js/script.js"></script>
   </body>
 </html>

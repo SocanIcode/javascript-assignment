@@ -1,0 +1,10 @@
+{
+  "prettier.resolveGlobalModules": false,
+  "npm-intellisense.showBuildInLibs": true,
+  "prettier.withNodeModules": true,
+  "node-module-intellisense.modulePaths": [],
+  "typescript.tsserver.nodePath": "",
+  "search.exclude": {
+    "const { JSDOM } = require(\"jsdom\"); const { window } = new JSDOM(); const document = window.document;  // Now, document is available for use in Node": true
+  }
+}

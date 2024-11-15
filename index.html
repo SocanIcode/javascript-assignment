@@ -15,7 +15,7 @@
     />
 
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="./js/script.js"></script>
+    
   </head>
   <body>
     <header>
@@ -24,22 +24,33 @@
       <div class="navbar">
         <ul>
           <li><a class="active" href="index.html">Home</a></li>
-          <li>
-            <a href="/html/product.html">Poduct</a>
+          <li id="toggleDropdown">Poduct <i  class="fa-solid fa-caret-down"></i>
+           <!--this is a product dropdown-->
+       <div class="dropdown">            
+        <ul>
+          <li onclick="sortProducts('all')"><a href="/html/product.html">All</a></li>
+          <li onclick="sortProducts('men')"><a href="/html/product-catagroies/men.html">Men</a></li>
+          <li onclick="sortProducts('women')"><a href="/html/product-catagroies/women.html">Women</a></li>
+        </ul>              
+    </div>
           </li>
+    <!--product dropdown ends here-->
+                 
+                
           <li><a href="/html/about.html">About</a></li>
           <li><a href="/html/contact.html">Contact</a></li>
           <li>
             <a class="user" href="/html/account.html"><i class="fa-regular fa-user"></i></a>
-          </li>
+          
           <li>
             <a class="user" href="/html/cart.html"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
           <a id="exit" href="#"><i  class="fa-solid fa-circle-xmark"></i></a>
-        </ul>
+        </ul>        
       </div>
+      
       <div class="ham-menu">
        
         <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
@@ -64,10 +75,10 @@
         <div class="item-box">
           <!-- product1-->
           <div class="item">
-            <img src="image/Mred-jacket.jpg" alt="" />
+            <img src="/image/women-pink-wind-jacket.jpg" alt="A woman pink jacket suitable for all seasons, featuring warm insulated material. The jacket has black accentson wrist tip the zipper and cuffs." />
             <div class="descr">
               <span>Raindays</span>
-              <h5>Wind-protection all season red jacket</h5>
+              <h5>Wind-protection all season pink jacket</h5>
               <div class="star">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -76,7 +87,7 @@
                 <i class="fa-solid fa-star"></i>
               </div>
               <h4>545 kr</h4>
-              <a href="/html/cart.html">
+              <a href="html/cart.html">
                 <i class="fa-solid fa-cart-plus"></i
               ></a>
             </div>
@@ -84,10 +95,10 @@
 
           <!-- product2-->
           <div class="item">
-            <img src="image/Mgreen.jpg" alt="" />
+            <img src="/image/women-white-jacket.jpg" alt="A woman white jacket suitable for all seasons, featuring warm insulated material. The jacket has black accentson wrist tip the zipper and cuffs." />
             <div class="descr">
               <span>Raindays</span>
-              <h5>Wind-protection all season red jacket</h5>
+              <h5>Wind-protection all season white jacket</h5>
               <div class="star">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -96,17 +107,17 @@
                 <i class="fa-solid fa-star"></i>
               </div>
               <h4>545 kr</h4>
-              <a href="/html/cart.html">
+              <a href="html/cart.html">
                 <i class="fa-solid fa-cart-plus"></i
               ></a>
             </div>
           </div>
           <!-- product3-->
           <div class="item">
-            <img src="image/Mred-jacket.jpg" alt="" />
+            <img src="/image/women-gray-jacket.jpg" alt="A woman cream jacket suitable for all seasons, featuring warm insulated material. The jacket has black accentson on side the zipper and side pockets." />
             <div class="descr">
               <span>Raindays</span>
-              <h5>Wind-protection all season red jacket</h5>
+              <h5>Winter- insulated cream jacket</h5>
               <div class="star">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -115,17 +126,17 @@
                 <i class="fa-solid fa-star"></i>
               </div>
               <h4>545 kr</h4>
-              <a href="/html/cart.html">
+              <a href="html/cart.html">
                 <i class="fa-solid fa-cart-plus"></i
               ></a>
             </div>
           </div>
           <!-- product4-->
           <div class="item">
-            <img src="image/Mblack-jacket.jpg" alt="" />
+            <img src="/image/women-red-jacket.jpg" alt="A woman pink jacket suitable for all seasons, featuring warm insulated material. The jacket has black accentson on side the zipper and pockets." />
             <div class="descr">
               <span>Raindays</span>
-              <h5>Wind-protection all season red jacket</h5>
+              <h5>Winter- insulated cream jacket</h5>
               <div class="star">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -134,97 +145,90 @@
                 <i class="fa-solid fa-star"></i>
               </div>
               <h4>545 kr</h4>
-              <a href="/html/cart.html">
+              <a href="html/cart.html">
                 <i class="fa-solid fa-cart-plus"></i
               ></a>
             </div>
           </div>
           <!-- product5-->
-          <div class="item">
-            <img src="image/Mlight-green.jpg" alt="" />
-            <div class="descr">
-              <span>Raindays</span>
-              <h5>Wind-protection all season red jacket</h5>
-              <div class="star">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+            <div class="item">
+              <img src="/image/men-green-jacket.jpg" alt="A redjacket for man wind protection with a high collar, front zipper, and side pockets." />
+              <div class="descr">
+                <span>Raindays</span>
+                <h5>Wind-protection all season green jacket</h5>
+                <div class="star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>545 kr</h4>
+                <a href="html/cart.html">
+                  <i class="fa-solid fa-cart-plus"></i
+                ></a>
               </div>
-              <h4>545 kr</h4>
-              <a href="/html/cart.html">
-                <i class="fa-solid fa-cart-plus"></i
-              ></a>
             </div>
-          </div>
-
-          <!-- product6-->
-
-          <div class="item">
-            <img src="image/Mgreen.jpg" alt="" />
-            <div class="descr">
-              <span>Raindays</span>
-              <h5>Wind-protection all season red jacket</h5>
-              <div class="star">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+  
+            <!-- product 6-->
+            <div class="item">
+              <img src="/image/men-black-jacket.jpg" alt="A black jacket for man wind protection with a high collar, front zipper, and side pockets." />
+              <div class="descr">
+                <span>Raindays</span>
+                <h5>Wind-protection all season black jacket</h5>
+                <div class="star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>545 kr</h4>
+                <a href="html/cart.html">
+                  <i class="fa-solid fa-cart-plus"></i
+                ></a>
               </div>
-              <h4>545 kr</h4>
-              <a href="/html/cart.html">
-                <i class="fa-solid fa-cart-plus"></i
-              ></a>
             </div>
-          </div>
-          <!--product 7-->
-          <div class="item">
-            <img src="image/Mgreen.jpg" alt="" />
-            <div class="descr">
-              <span>Raindays</span>
-              <h5>Wind-protection all season red jacket</h5>
-              <div class="star">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+            <!-- product 7-->
+            <div class="item">
+              <img src="/image/men-winter-jacket-black.jpg" alt="A black jacket man designed for wind, rain, and winter with high collar and a durable, water-resistant insulated and thick, suitable for cold conditions, and features a zippered front with side pockets." />
+              <div class="descr">
+                <span>Raindays</span>
+                <h5>Winter- insulated dark jackett</h5>
+                <div class="star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>545 kr</h4>
+                <a href="html/cart.html">
+                  <i class="fa-solid fa-cart-plus"></i
+                ></a>
               </div>
-              <h4>545 kr</h4>
-              <a href="/html/cart.html">
-                <i class="fa-solid fa-cart-plus"></i
-              ></a>
             </div>
-          </div>
-          <!--product 8-->
-          <div class="item">
-            <img src="image/Mgreen.jpg" alt="" />
-            <div class="descr">
-              <span>Raindays</span>
-              <h5>Wind-protection all season red jacket</h5>
-              <div class="star">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+            <!-- product 8-->
+            <div class="item">
+              <img src="/image/men-winter-jacket-dark-green.jpg" alt="A dark-green jacket man designed for wind, rain, and winter with high collar and a durable, water-resistant insulated and thick, suitable for cold conditions, and features a zippered front with side pockets" />
+              <div class="descr">
+                <span>Raindays</span>
+                <h5>Winter- insulated dark green jacket</h5>
+                <div class="star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>545 kr</h4>
+                <a href="html/cart.html">
+                  <i class="fa-solid fa-cart-plus"></i
+                ></a>
               </div>
-              <h4>545 kr</h4>
-              <a href="/html/cart.html">
-                <i class="fa-solid fa-cart-plus"></i
-              ></a>
             </div>
-          </div>
-        </div>
       </section>
-      <!--this is the banner section-->
-      <section class="banner section-gap">
-        <h2>Chistmas shop up to <span>50% OFF </span>all jacket</h2>
-        <h4>Laugh all the way with our generous holiday discounts!</h4>
-        <a class="button-cta" href="/html/product.html">Buy Now</a>
-      </section>
+   
       <!--this is the new product section-->
       <section class="section-gap"></section>
       <section id="main-prod">
@@ -234,17 +238,16 @@
         </div>
 
         <div class="item-box">
-          <!-- product1-->
-          <div class="item">
+           <!-- product1-->
+           <div class="item">
             <img
-              src="image/ai-generated/ai-gen-champagne-beig-women-jacket.jpg"
-              alt=""
-            />
+              src="/image/ai-generated/ai-generated-men-orange-jacket.jpg"
+              alt="An AI-generated bright orange winter jacket designed for cold weather. The jacket is insulated and thick, with a zippered front and side pockets, providing warmth and functionality. It features a cozy hood for additional protection from wind and snow."/>
             <div class="descr nprice">
               <span>Raindays</span>
-              <h5>Winter collection - walk the winter with style</h5>
+              <h5>Winter collection orange jacker- walk the winter with style</h5>
               <h4>1800 kr</h4>
-              <a href="/html/cart.html">
+              <a href="html/cart.html">
                 <i class="fa-solid fa-cart-plus"></i
               ></a>
             </div>
@@ -252,14 +255,13 @@
           <!--new product 2-->
           <div class="item">
             <img
-              src="image/ai-generated/ai-gen-miliary-green-winter-jacket.jpg"
-              alt=""
-            />
+              src="/image/ai-generated/ai-generated-women-cream-jacket.jpg"
+              alt="An AI-generated cream winter jacket designed for cold weather. The jacket is insulated and thick, with a zippered front and side pockets, providing warmth and functionality. It features a cozy hood for additional protection from wind and snow."/>
             <div class="descr nprice">
               <span>Raindays</span>
-              <h5>Winter collection - walk the winter with style</h5>
+              <h5>Winter collection cream jacket- walk the winter with style</h5>
               <h4>1800 kr</h4>
-              <a href="/html/cart.html">
+              <a href="html/cart.html">
                 <i class="fa-solid fa-cart-plus"></i
               ></a>
             </div>
@@ -267,12 +269,12 @@
           <!--new product 3-->
 
           <div class="item">
-            <img src="image/ai-generated/ai-gen-orange-jacket.jpg" alt="" />
+            <img src="/image/ai-generated/ai-generated-men-gray-jacket.jpg" alt="An AI-generated gray winter jacket designed for cold weather. The jacket is insulated and thick, with a zippered front and side pockets, providing warmth and functionality. It features a cozy hood for additional protection from wind and snow."/>
             <div class="descr nprice">
               <span>Raindays</span>
-              <h5>Winter collection - walk the winter with style</h5>
+              <h5>Winter collection gray jacket- walk the winter with style</h5>
               <h4>1800 kr</h4>
-              <a href="/html/cart.html">
+              <a href="html/cart.html">
                 <i class="fa-solid fa-cart-plus"></i
               ></a>
             </div>
@@ -281,85 +283,80 @@
 
           <div class="item">
             <img
-              src="image/ai-generated/ai-gen-yellow-women-rain-coat.jpg"
-              alt=""
-            />
+              src="/image/ai-generated/ai-generated-women-cream-jacket.jpg"
+              alt="An AI-generated cream winter jacket designed for cold weather. The jacket is insulated and thick, with a zippered front and side pockets, providing warmth and functionality. It features a cozy hood for additional protection from wind and snow."/>
             <div class="descr nprice">
               <span>Raindays</span>
-              <h5>Winter collection - walk the winter with style</h5>
+              <h5>Winter collection cream jacket - walk the winter with style</h5>
               <h4>1800 kr</h4>
-              <a href="/html/cart.html">
+              <a href="html/cart.html">
                 <i class="fa-solid fa-cart-plus"></i
               ></a>
             </div>
           </div>
-          <!--new product 5-->
+            <!--new product 5-->
 
-          <div class="item">
-            <img
-              src="image/ai-generated/ai-gen-champagne-beig-women-jacket.jpg"
-              alt=""
-            />
-            <div class="descr nprice">
-              <span>Raindays</span>
-              <h5>Winter collection - walk the winter with style</h5>
-              <h4>1800 kr</h4>
-              <a href="/html/cart.html">
-                <i class="fa-solid fa-cart-plus"></i
-              ></a>
+            <div class="item">
+              <img
+                src="/image/ai-generated/ai-generated-men-orange-jacket.jpg"
+                alt="An AI-generated gray winter jacket designed for cold weather. The jacket is insulated and thick, with a zippered front and side pockets, providing warmth and functionality. It features a cozy hood for additional protection from wind and snow."/>
+              <div class="descr nprice">
+                <span>Raindays</span>
+                <h5>Winter collection orange jacket- walk the winter with style</h5>
+                <h4>1800 kr</h4>
+                <a href="html/cart.html">
+                  <i class="fa-solid fa-cart-plus"></i
+                ></a>
+              </div>
             </div>
-          </div>
-          <!--new product 6-->
-
-          <div class="item">
-            <img
-              src="image/ai-generated/ai-gen-yellow-women-rain-coat.jpg"
-              alt=""
-            />
-            <div class="descr nprice">
-              <span>Raindays</span>
-              <h5>Winter collection - walk the winter with style</h5>
-              <h4>1800 kr</h4>
-              <a href="/html/cart.html">
-                <i class="fa-solid fa-cart-plus"></i
-              ></a>
+            <!--new product 6-->
+  
+            <div class="item">
+              <img
+                src="/image/ai-generated/ai-generated-women-cream-jacket.jpg"
+                alt="An AI-generated cream winter jacket designed for cold weather. The jacket is insulated and thick, with a zippered front and side pockets, providing warmth and functionality. It features a cozy hood for additional protection from wind and snow."
+              />
+              <div class="descr nprice">
+                <span>Raindays</span>
+                <h5>Winter collection yellow jacket- walk the winter with style</h5>
+                <h4>1800 kr</h4>
+                <a href="html/cart.html">
+                  <i class="fa-solid fa-cart-plus"></i
+                ></a>
+              </div>
             </div>
-          </div>
-          <!--new product 7-->
-
-          <div class="item">
-            <img
-              src="image/ai-generated/ai-gen-champagne-beig-women-jacket.jpg"
-              alt=""
-            />
-            <div class="descr nprice">
-              <span>Raindays</span>
-              <h5>Winter collection - walk the winter with style</h5>
-              <h4>1800 kr</h4>
-              <a href="/html/cart.html">
-                <i class="fa-solid fa-cart-plus"></i
-              ></a>
+            <!--new product 7-->
+  
+            <div class="item">
+              <img
+                src="/image/ai-generated/ai-generated-women-yellow-jacket.jpg"
+                 alt="An AI-generated yellow rain jacket designed for cold weather. The jacket is insulated and thick, with a zippered front and side pockets, providing warmth and functionality. It features a cozy hood for additional protection from wind and snow."/>
+              <div class="descr nprice">
+                <span>Raindays</span>
+                <h5>Winter collection yellow jacket - walk the winter with style</h5>
+                <h4>1800 kr</h4>
+                <a href="html/cart.html">
+                  <i class="fa-solid fa-cart-plus"></i
+                ></a>
+              </div>
             </div>
-          </div>
-          <!--new product 8-->
-
-          <div class="item">
-            <img
-              src="image/ai-generated/ai-gen-yellow-women-rain-coat.jpg"
-              alt=""
-            />
-            <div class="descr nprice">
-              <span>Raindays</span>
-              <h5>Winter collection - walk the winter with style</h5>
-              <h4>1800 kr</h4>
-              <a href="/html/cart.html">
-                <i class="fa-solid fa-cart-plus"></i
-              ></a>
+            <!--new product 8-->
+  
+            <div class="item">
+              <img
+                src="/image/ai-generated/ai-generated-men-gray-jacket.jpg"
+                alt="An AI-generated gray winter jacket designed for cold weather. The jacket is insulated and thick, with a zippered front and side pockets, providing warmth and functionality. It features a cozy hood for additional protection from wind and snow."
+              />
+              <div class="descr nprice">
+                <span>Raindays</span>
+                <h5>Winter collection gray - walk the winter with style</h5>
+                <h4>1800 kr</h4>
+                <a href="html/cart.html">
+                  <i class="fa-solid fa-cart-plus"></i
+                ></a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!--product feature ends here-->
+        </section><!--product feature ends here-->
 
       <section class="offer-cta section-gap">
         <!--small banner 1-->
@@ -455,4 +452,5 @@
       </div>
     </footer>
   </body>
+  <script src="/js/script.js"></script>
 </html>

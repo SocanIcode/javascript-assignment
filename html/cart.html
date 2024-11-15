@@ -14,88 +14,143 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/scripts.js"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+    
   </head>
   <body>
     <header>
-      <a id="logo" href="/index.html"
-        ><img src="../image/RainyDays_Logo.png"
-      /></a>
+      <a id="logo" href="/index.html"><img src="/image/RainyDays_Logo.png"/></a>
+      <nav>
       <div class="navbar">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="/html/product.html">Poduct</a></li>
-          <li><a class="active" href="/html/about.html">About</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li  id="toggleDropdown"  class="active">Poduct <i class="fa-solid fa-caret-down"></i>
+           <!--this is a product dropdown-->
+       <div class="dropdown">            
+        <ul  class="active">
+          <li onclick="sortProducts('men')"><a href="/html/product.html">All</a></li>
+          <li onclick="sortProducts('men')"><a href="/html/product-catagroies/men.html">Men</a></li>
+          <li onclick="sortProducts('women')"><a href="/html/product-catagroies/women.html">Women</a></li>
+        </ul>              
+    </div>
+          </li>
+    <!--product dropdown ends here-->
+                 
+                
+          <li><a href="/html/about.html">About</a></li>
           <li><a href="/html/contact.html">Contact</a></li>
           <li>
-            <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
-          </li>
+            <a class="user" href="/html/account.html"><i class="fa-regular fa-user"></i></a>
+          
           <li>
-            <a href="/html/cart.html"
+            <a class="user" href="/html/cart.html"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
-        </ul>
+          <a id="exit" href="#"><i  class="fa-solid fa-circle-xmark"></i></a>
+        </ul>        
       </div>
+      
+      <div class="ham-menu">
+       
+        <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
+        <a href="/html/cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+        <i id="bar" class="fa-solid fa-bars"></i>
+      </div>
+      </nav>
     </header>
-    <footer class="section-gap">
-      <div class="nav-footer">
-        <a href="/index.html"
-          ><img src="../image/RainyDays_Logo.png" alt="raindays logo"/></a>
-        <!--this is for contact us information-->
-        <h4>Contact</h4>
-         <address>Batmangatan 163 41</address>
-        <address>Stockholm, Sweden</address>
-        <p>Phone : 07004118001</p>
-        <p>Email :
-        <a class="email-link" href="/html/contact.html">info@raindays.com</a></p>
-      </div>
-        
-        <!--this is for about page nav footer-->
-       <div class="nav-footer">
-        <h4>About</h4>
-        <a href="/html/about.html">About us</a>
-        <a href="/html/delivery-tracking.html">Delivery Information</a>
-        <a href="/html/privacy-policy.html">Privacy Policy</a>
-        <a href="/html/terms-and-condition.html">Terms and Condition</a>
-      </div>
-      <div class="nav-footer">
-           <!--this is for my account page nav footer-->
-        <h4>My Account</h4>
-        <a href="/html/account.html">Sign In</a>
-        <a href="/html/cart.html">View Cart</a>
-        <a href="/html/delivery-tracking.html">Track My Order</a>
-        <a href="/html/contact.html">Help</a>
-      </div>
-         <!--this is for payment methods page nav footer-->
-      <div class="nav-footer">
-        <h4>Payment Methods<h4>
-          <i class="fa-brands fa-cc-visa"></i>
-          <i class="fa-brands fa-cc-mastercard"></i>
-          <i class="fa-brands fa-paypal"></i>
-          <i class="fa-solid fa-k"></i>
-      </div>
-      <!--this is for social media-->
-      <div class="nav-footer social-md">
-        <h4>Follow us</h4>
-        <div class="icons">
-          <a href="https://www.facebook.com/wdasie21">
-            <i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="https://www.youtube.com/@wdasie21"
-            ><i class="fa-brands fa-youtube"></i></a
-          ><a href="https://www.instagram.com/wdasie21/">
-            <i class="fa-brands fa-instagram"></i></a
-          ><a href="https://www.tiktok.com/@wdasie21">
-            <i class="fa-brands fa-tiktok"></i
-          ></a>
+ <!-- Hotjar Tracking check what is hotjar us in js and css -->
+
+<main class="main-checkout">
+  <div class="header-of-cart-page"></div>
+
+  <div class="main-checkout_wrapper">
+    <div class="shopping-cart"></div>
+    <section class="order-summary">
+      <h1>Order summary</h1>
+      <div class="order-summary-wrapper">
+        <div class="total">
+          <p>Sub Total</p>
+          <p class="sub-total"></p>
+        </div>
+        <div class="total">
+          <p>Shipping</p>
+          <p>US $0.00</p>
+        </div>
+        <div class="total">
+          <p>Total</p>
+          <p class="gran-total"></p>
         </div>
       </div>
-       <!--this is for follow us in copright-->
-       <div class="copyright">
-        <p>@Raindays 2024 - All Right Reserved</p>
+      <div>
+        <a  class="button-cta" href="/html/checkout.html">Checkout Now</a>
+        <a  class="button-cta continue-shopping" href="/html/product.html">Continue Shopping</a>
       </div>
-    </footer>
+    </section>
+  </div>
+</main>
+
+
+<footer class="section-gap">
+  <div class="nav-footer">
+    <a href="/index.html"
+      ><img src="../image/RainyDays_Logo.png" alt="raindays logo"/></a>
+    <!--this is for contact us information-->
+    <h4>Contact</h4>
+     <address>Batmangatan 163 41</address>
+    <address>Stockholm, Sweden</address>
+    <p>Phone : 07004118001</p>
+    <p>Email :
+    <a class="email-link" href="/html/contact.html">info@raindays.com</a></p>
+  </div>
+    
+    <!--this is for about page nav footer-->
+   <div class="nav-footer">
+    <h4>About</h4>
+    <a href="/html/about.html">About us</a>
+    <a href="/html/delivery-tracking.html">Delivery Information</a>
+    <a href="/html/privacy-policy.html">Privacy Policy</a>
+    <a href="/html/terms-and-condition.html">Terms and Condition</a>
+  </div>
+  <div class="nav-footer">
+       <!--this is for my account page nav footer-->
+    <h4>My Account</h4>
+    <a href="/html/account.html">Sign In</a>
+    <a href="/html/cart.html">View Cart</a>
+    <a href="/html/delivery-tracking.html">Track My Order</a>
+    <a href="/html/contact.html">Help</a>
+  </div>
+     <!--this is for payment methods page nav footer-->
+  <div class="nav-footer">
+    <h4>Payment Methods<h4>
+      <i class="fa-brands fa-cc-visa"></i>
+      <i class="fa-brands fa-cc-mastercard"></i>
+      <i class="fa-brands fa-paypal"></i>
+      <i class="fa-solid fa-k"></i>
+  </div>
+  <!--this is for social media-->
+  <div class="nav-footer social-md">
+    <h4>Follow us</h4>
+    <div class="icons">
+      <a href="https://www.facebook.com/wdasie21">
+        <i class="fa-brands fa-facebook"></i
+      ></a>
+      <a href="https://www.youtube.com/@wdasie21"
+        ><i class="fa-brands fa-youtube"></i></a
+      ><a href="https://www.instagram.com/wdasie21/">
+        <i class="fa-brands fa-instagram"></i></a
+      ><a href="https://www.tiktok.com/@wdasie21">
+        <i class="fa-brands fa-tiktok"></i
+      ></a>
+    </div>
+  </div>
+   <!--this is for follow us in copright-->
+   <div class="copyright">
+    <p>@Raindays 2024 - All Right Reserved</p>
+  </div>
+</footer>
+  <script src="/js/script.js"></script>
   </body>
 </html>

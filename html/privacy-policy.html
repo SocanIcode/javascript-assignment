@@ -14,35 +14,115 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/scripts.js"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+    
   </head>
   <body>
     <header>
-      <a id="logo" href="/index.html"
-        ><img src="../image/RainyDays_Logo.png"
-      /></a>
+      <a id="logo" href="/index.html"><img src="/image/RainyDays_Logo.png"/></a>
+      <nav>
       <div class="navbar">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="/html/product.html">Poduct</a></li>
-          <li><a class="active" href="/html/about.html">About</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li  id="toggleDropdown" >Poduct <i class="fa-solid fa-caret-down"></i>
+           <!--this is a product dropdown-->
+       <div class="dropdown">            
+        <ul  class="active">
+          <li onclick="sortProducts('men')"><a href="/html/product.html">All</a></li>
+          <li onclick="sortProducts('men')"><a href="/html/product-catagroies/men.html">Men</a></li>
+          <li onclick="sortProducts('women')"><a href="/html/product-catagroies/women.html">Women</a></li>
+        </ul>              
+    </div>
+          </li>
+    <!--product dropdown ends here-->
+                 
+                
+          <li><a href="/html/about.html">About</a></li>
           <li><a href="/html/contact.html">Contact</a></li>
           <li>
-            <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
-          </li>
+            <a class="user" href="/html/account.html"><i class="fa-regular fa-user"></i></a>
+          
           <li>
-            <a href="/html/cart.html"
+            <a class="user" href="/html/cart.html"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
-        </ul>
+          <a id="exit" href="#"><i  class="fa-solid fa-circle-xmark"></i></a>
+        </ul>        
       </div>
+      
+      <div class="ham-menu">
+       
+        <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
+        <a href="/html/cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+        <i id="bar" class="fa-solid fa-bars"></i>
+      </div>
+      </nav>
     </header>
+      
+    <main>
+        <section class="section-gap"></section>
+         
+      <section class="sub-title">
+        <h1>Rainday Privacy Policy</h1>
+
+        <p>Effective Date: [Insert Date]</p>
+    
+        <h2>1. Introduction</h2>
+        <p>At Rainday, we respect your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, store, and protect the information you provide when using our website, products, or services.</p>
+    
+        <h2>2. Information We Collect</h2>
+        <p>We collect various types of information to provide you with the best service and experience:</p>
+        <ul>
+            <li><span>Personal Information:</span> This includes your name, email address, shipping address, payment details, and contact information when you make a purchase or sign up for our newsletter.</li>
+            <li><span>Usage Data:</span> We may collect data on how you interact with our website, such as IP addresses, browser types, pages viewed, and time spent on the site.</li>
+            <li><span>Cookies:</span> We use cookies to enhance your experience and gather analytical data. You can control cookie settings through your browser.</li>
+        </ul>
+    
+        <h2>3. How We Use Your Information</h2>
+        <p>The information we collect is used for various purposes, including:</p>
+        <ul>
+            <li>Processing and fulfilling orders</li>
+            <li>Sending promotional offers and updates (if you have opted in to receive them)</li>
+            <li>Improving our website, products, and services based on usage data</li>
+            <li>Providing customer support and responding to inquiries</li>
+            <li>Complying with legal obligations and preventing fraud</li>
+        </ul>
+    
+        <h2>4. Data Sharing</h2>
+        <p>We do not sell or rent your personal information to third parties. However, we may share your information with trusted service providers to help us fulfill your orders, process payments, or enhance your experience. These providers are obligated to protect your data and only use it for the specific services they are hired to perform.</p>
+    
+        <h2>5. Data Security</h2>
+        <p>We take reasonable precautions to protect your personal data from unauthorized access, alteration, disclosure, or destruction. However, no method of data transmission over the internet is 100% secure, and we cannot guarantee the absolute security of your information.</p>
+    
+        <h2>6. Your Rights</h2>
+        <p>You have the following rights regarding your personal information:</p>
+        <ul>
+            <li><span>Access:</span> You have the right to request access to the personal data we hold about you.</li>
+            <li><span>Correction:</span> You can request corrections to any inaccuracies in your personal data.</li>
+            <li><span>Deletion:</span> You can request that we delete your personal data, subject to certain exceptions.</li>
+            <li><span>Opt-out:</span> You can opt-out of receiving promotional emails or communications from us.</li>
+        </ul>
+    
+        <h2>7. Third-Party Links</h2>
+        <p>Our website may contain links to third-party sites. These sites have their own privacy policies, and we are not responsible for their content or privacy practices. We encourage you to review the privacy policies of these sites before providing any personal information.</p>
+    
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>Rainday reserves the right to update this Privacy Policy at any time. When we make changes, we will update the "Effective Date" at the top of this page. We recommend checking this page periodically to stay informed about how we are protecting your information.</p>
+    
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions or concerns regarding our privacy practices, please contact us at:</p>
+        <p>Email: <a href="mailto:support@rainday.com">support@rainday.com</a></p>
+       </section>
+
+  </main>
+    <!--this is the foooter  nav section-->
     <footer class="section-gap">
       <div class="nav-footer">
         <a href="/index.html"
-          ><img src="../image/RainyDays_Logo.png" alt="raindays logo"/></a>
+          ><img src="/image/RainyDays_Logo.png" alt="raindays logo"/></a>
         <!--this is for contact us information-->
         <h4>Contact</h4>
          <address>Batmangatan 163 41</address>
@@ -98,4 +178,5 @@
       </div>
     </footer>
   </body>
+  <script src="/js/script.js"></script>
 </html>

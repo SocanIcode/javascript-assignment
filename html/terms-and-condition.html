@@ -14,35 +14,108 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/scripts.js"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+    
   </head>
   <body>
     <header>
-      <a id="logo" href="/index.html"
-        ><img src="../image/RainyDays_Logo.png"
-      /></a>
+      <a id="logo" href="/index.html"><img src="/image/RainyDays_Logo.png"/></a>
+      <nav>
       <div class="navbar">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="/html/product.html">Poduct</a></li>
-          <li><a class="active" href="/html/about.html">About</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li  id="toggleDropdown" >Poduct <i class="fa-solid fa-caret-down"></i>
+           <!--this is a product dropdown-->
+       <div class="dropdown">            
+        <ul  class="active">
+          <li onclick="sortProducts('men')"><a href="/html/product.html">All</a></li>
+          <li onclick="sortProducts('men')"><a href="/html/product-catagroies/men.html">Men</a></li>
+          <li onclick="sortProducts('women')"><a href="/html/product-catagroies/women.html">Women</a></li>
+        </ul>              
+    </div>
+          </li>
+    <!--product dropdown ends here-->
+                 
+                
+          <li><a href="/html/about.html">About</a></li>
           <li><a href="/html/contact.html">Contact</a></li>
           <li>
-            <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
-          </li>
+            <a class="user" href="/html/account.html"><i class="fa-regular fa-user"></i></a>
+          
           <li>
-            <a href="/html/cart.html"
+            <a class="user" href="/html/cart.html"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
-        </ul>
+          <a id="exit" href="#"><i  class="fa-solid fa-circle-xmark"></i></a>
+        </ul>        
       </div>
+      
+      <div class="ham-menu">
+       
+        <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
+        <a href="/html/cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+        <i id="bar" class="fa-solid fa-bars"></i>
+      </div>
+      </nav>
     </header>
+      
+    <main>
+        <section class="section-gap"></section>
+         
+      <section class="sub-title">  
+        <h1 >Raindays Terms and Conditions</h1> 
+
+    <h2>1. Product Use and Care</h2>
+    <p>Our jackets are crafted for durability and comfort across all seasons, with materials designed to withstand rain, wind, and cold weather. To ensure the longevity and performance of your jacket:</p>
+    <ul>
+        <li><span>Follow Care Instructions:</span> Always follow washing and care instructions on the product label.</li>
+        <li><span>Weather Conditions:</span> While our jackets are highly durable, extreme conditions beyond typical seasonal weather may impact performance.</li>
+    </ul>
+
+    <h2>2. Materials and Sustainability</h2>
+    <p>Rainday jackets are made with sustainable materials that aim to reduce environmental impact. However, we do not guarantee that any jacket is entirely immune to wear and tear. Sustainability benefits are maximized through proper care and responsible use.</p>
+
+    <h2>3. Warranty</h2>
+    <ul>
+        <li><span>Coverage:</span> Rainday provides a one-year warranty for defects in materials and craftsmanship under normal use. This includes issues with zippers, seams, and fabric durability.</li>
+        <li><span>Exclusions:</span> This warranty does not cover damage caused by improper care, accidents, alterations, or exposure to extreme conditions outside normal seasonal weather.</li>
+        <li><span>Claims:</span> To initiate a warranty claim, provide proof of purchase and photos of the issue to our customer service team at <a href="mailto:support@rainday.com">support@rainday.com</a>.</li>
+    </ul>
+
+    <h2>4. Returns and Exchanges</h2>
+    <ul>
+        <li><span>Eligibility:</span> We accept returns and exchanges for unused, undamaged items within 30 days of purchase. Returned items must be in their original condition with tags attached.</li>
+        <li><span>Refunds:</span> Refunds will be issued to the original payment method within 10 business days of receiving the return.</li>
+        <li><span>Exchange Process:</span> For exchanges, please indicate the desired size or model. Exchanges are subject to product availability.</li>
+        <li><span>Non-Returnable Items:</span> Customized or personalized jackets are final sale and are not eligible for return or exchange.</li>
+    </ul>
+
+    <h2>5. Limitations of Liability</h2>
+    <p>Rainday is not liable for:</p>
+    <ul>
+        <li><span>Third-Party Damages:</span> Any damage or wear caused by external forces beyond our control.</li>
+        <li><span>Health Reactions:</span> Any skin irritation or allergic reaction due to materials used in the jacket.</li>
+        <li><span>Misuse of Product:</span> Any damage resulting from misuse, alteration, or failure to follow care instructions.</li>
+    </ul>
+
+    <h2>6. Intellectual Property</h2>
+    <p>The Rainday brand, logo, and jacket designs are intellectual property protected under applicable trademark and copyright laws. Unauthorized use of Rainday’s intellectual property is prohibited.</p>
+
+    <h2>7. Changes to Terms</h2>
+    <p>Rainday reserves the right to amend these Terms and Conditions at any time. Updates will be posted on our website, and continued use of Rainday products constitutes acceptance of these changes.</p>
+
+    <h2>8. Contact Us</h2>
+    <p>If you have any questions regarding these Terms and Conditions, please contact Rainday customer service at <a href="mailto:support@rainday.com">support@rainday.com</a>.</p>
+  </section>
+  </main>
+    <!--this is the foooter  nav section-->
     <footer class="section-gap">
       <div class="nav-footer">
         <a href="/index.html"
-          ><img src="../image/RainyDays_Logo.png" alt="raindays logo"/></a>
+          ><img src="/image/RainyDays_Logo.png" alt="raindays logo"/></a>
         <!--this is for contact us information-->
         <h4>Contact</h4>
          <address>Batmangatan 163 41</address>
@@ -98,4 +171,5 @@
       </div>
     </footer>
   </body>
+  <script src="/js/script.js"></script>
 </html>

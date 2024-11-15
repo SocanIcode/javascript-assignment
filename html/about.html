@@ -19,26 +19,38 @@
   </head>
   <body>
     <header>
-      <a id="logo" href="/index.html"
-        ><img src="../image/RainyDays_Logo.png"
-      /></a>
+      <a id="logo" href="/index.html"><img src="/image/RainyDays_Logo.png"/></a>
+      <nav>
       <div class="navbar">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="/html/product.html">Poduct</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li  id="toggleDropdown"  class="active">Poduct <i class="fa-solid fa-caret-down"></i>
+           <!--this is a product dropdown-->
+       <div class="dropdown">            
+        <ul  class="active">
+          <li onclick="sortProducts('men')"><a href="/html/product.html">All</a></li>
+          <li onclick="sortProducts('men')"><a href="/html/product-catagroies/men.html">Men</a></li>
+          <li onclick="sortProducts('women')"><a href="/html/product-catagroies/women.html">Women</a></li>
+        </ul>              
+    </div>
+          </li>
+    <!--product dropdown ends here-->
+                 
+                
           <li><a class="active" href="/html/about.html">About</a></li>
           <li><a href="/html/contact.html">Contact</a></li>
           <li>
-            <a class="user" href="/html/account.html"><i class="fa-regular fa-user"></i></a>
-          </li>
+            <a  href="/html/account.html"><i class="fa-regular fa-user"></i></a>
+          
           <li>
-            <a  class="user" href="/html/cart.html"
+            <a class="user" href="/html/cart.html"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
           <a id="exit" href="#"><i  class="fa-solid fa-circle-xmark"></i></a>
-        </ul>
+        </ul>        
       </div>
+      
       <div class="ham-menu">
        
         <a href="/html/account.html"><i class="fa-regular fa-user"></i></a>
@@ -47,6 +59,7 @@
             ></a>
         <i id="bar" class="fa-solid fa-bars"></i>
       </div>
+      </nav>
     </header>
     <footer class="section-gap">
       <div class="nav-footer">
